@@ -11,7 +11,7 @@ URL「https://signate.jp/competitions/1106」
 ![画像1](https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/2890a0eb-f9bc-4b28-9e6b-5675645b0e27)
 
 ## データセット
-訓練用データセット：2175枚
+訓練用データセット：2175枚  
 評価用データセット：2180枚
 
 各画像サイズは512×512で、データ拡張は適用済みです
@@ -21,7 +21,7 @@ URL「https://signate.jp/competitions/1106」
 AUC (Area Under the Curve)
 
 ## 審査発表会
-学生部門においては、AUCランキング上位10名が審査発表会に進むことができます。最終的なランキングは審査発表会の内容を踏まえて決定されます。
+学生部門においては、AUCランキング上位10名が審査発表会に進むことができます。最終的なランキングは審査発表会の内容を踏まえて決定されます。  
 審査発表会で用いたスライドはこちら「https://drive.google.com/file/d/1DX5BDk5TKewiHqKUhjiqWy6Lt71cNQx2/view?usp=sharing」
 
 ### 審査項目
@@ -42,10 +42,10 @@ AUC (Area Under the Curve)
 ・食品の数が1182枚、飲料の数が994枚  
 　少し偏りがありましたが、そこまで問題にはならないと考えました
 
-・人間でも判別の難しい画像あり
+・人間でも判別の難しい画像あり  
 　実際にTrainデータを１枚１枚判別可能かどうかを人力で調査したところ、判別可能な割合は約92%でした。そのため、機械による正解率も最大で約92%が限界だろうと推測しました。
 
-・データ拡張が既に適用済
+・データ拡張が既に適用済  
 　左右反転、上下反転、回転といったシンプルなデータ拡張のみ追加
 
 ### ベースライン
@@ -53,16 +53,17 @@ AUC (Area Under the Curve)
 ![image](https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/adc2bab1-e1c4-48b6-9b22-cd2bd3eaa902)
 
 ### ベースライン改善
-・eva02_large_patch14_448に変更
+・eva02_large_patch14_448に変更  
 　コンペ初期に実験したときはパラメーターの設定ミスでbaseよりも精度が低くなったため、不採用にしていました。しかし、再度baseと全く同じ設定で実験を行ったところ、CVが約3.5%、Public LBが約1%向上しました。
 
-・モデルのバージョン変更
+・モデルのバージョン変更  
 　timmモデルのimagenetでのスコアをまとめた表を発見しました。eva02_large_patch14_448のデフォルトバージョンが以下の表における2番目のものであることに気づき、1番上のものに変更したところ、CVが約2.1%、Public LBが約1%向上しました。
  ![image](https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/2df2ca1a-d96a-4e60-b575-0f5a4dc94626)
 
-・交差検証とアンサンブルの組み合わせ
+・交差検証とアンサンブルの組み合わせ  
 　乱数シードのみを変えたモデルを５つ用意して、それぞれにおいて交差検証を行い、その結果を平均しました。これにより、乱数による性能のぶれを小さくすることができ、より安定したアルゴリズムになると考えています。
-![画像5](https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/fb89c50e-fc24-4a87-abf8-97044bca1d36)
+![image](https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/76c0322c-4aa4-4371-90eb-7cb29076659e)
+
 
 ### 精度向上に寄与しなかったアプローチ
 基本戦略で述べた「手法を変えるだけで精度が大幅に向上する」という気づきから、Adadelta、dagrad、Adam、Lion、momentum_SGD、Radam、Ranger21、RMSprop、SAM、SGDといったオプティマイザーを試しましたが、結局デフォルトのAdamWが最も安定しており精度が高かったです。
