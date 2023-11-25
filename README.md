@@ -1,7 +1,7 @@
 # テクノプロ・デザイン社 食品パッケージ画像解析チャレンジ（一般部門・学生部門）の解法
 
 本ページは2023年8月11日～9月29日に開催されたテクノプロ・デザイン社主催の食品パッケージ画像解析チャレンジにおいて、以下の成績を収めた解法についてまとめたページです。  
-コンペページ「https://signate.jp/competitions/1106」  
+コンペページ：https://signate.jp/competitions/1106  
   
 ・精度のみのランキングで一般・学生を合わせて3位（301人中）  
 ・審査発表会を含めた総合ランキングで学生部門4位（97人中）  
@@ -25,7 +25,7 @@ AUC (Area Under the Curve)
 
 ## 審査発表会
 学生部門においては、AUCランキング上位10名が審査発表会に進むことができます。最終的なランキングは審査発表会の内容を踏まえて決定されます。  
-審査発表会で用いたスライドはこちら「https://drive.google.com/file/d/1DX5BDk5TKewiHqKUhjiqWy6Lt71cNQx2/view?usp=sharing」
+審査発表会で用いたスライドはこちら：https://drive.google.com/file/d/1DX5BDk5TKewiHqKUhjiqWy6Lt71cNQx2/view?usp=sharing
 
 ### 審査項目
 ・スコアの結果  
