@@ -7,7 +7,7 @@
 ・審査発表会を含めた総合ランキングで学生部門4位（97人中）  
   
 ## コンペ概要
-本コンペは画像に写る商品が「飲料」か「食料」かを分類するコンペです。
+本コンペは画像に写る商品が「飲料」か「食料」かを分類するコンペです。  
 ![画像1](https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/2890a0eb-f9bc-4b28-9e6b-5675645b0e27)
 
 ## データセット
@@ -49,7 +49,7 @@ AUC (Area Under the Curve)
 　左右反転、上下反転、回転といったシンプルなデータ拡張のみ追加
 
 ### ベースライン
-様々なモデルを調査した結果、eva02が最も精度が良く、eva02_base_patch14_224をベースラインとしました。
+様々なモデルを調査した結果、eva02が最も精度が良く、eva02_base_patch14_224をベースラインとしました。  
 ![image](https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/adc2bab1-e1c4-48b6-9b22-cd2bd3eaa902)
 
 ### ベースライン改善
@@ -57,8 +57,10 @@ AUC (Area Under the Curve)
 　コンペ初期に実験したときはパラメーターの設定ミスでbaseよりも精度が低くなったため、不採用にしていました。しかし、再度baseと全く同じ設定で実験を行ったところ、CVが約3.5%、Public LBが約1%向上しました。
 
 ・モデルのバージョン変更  
-　timmモデルのimagenetでのスコアをまとめた表を発見しました。eva02_large_patch14_448のデフォルトバージョンが以下の表における2番目のものであることに気づき、1番上のものに変更したところ、CVが約2.1%、Public LBが約1%向上しました。
- ![image](https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/2df2ca1a-d96a-4e60-b575-0f5a4dc94626)
+　timmモデルのimagenetでのスコアをまとめた表を発見しました。eva02_large_patch14_448のデフォルトバージョンが以下の表における2番目のものであることに気づき、1番上のものに変更したところ、CVが約2.1%、Public LBが約1%向上しました。  
+ <p align="center">
+  <img src="https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/2df2ca1a-d96a-4e60-b575-0f5a4dc94626" />
+</p>
 
 ・交差検証とアンサンブルの組み合わせ  
 　乱数シードのみを変えたモデルを５つ用意して、それぞれにおいて交差検証を行い、その結果を平均しました。これにより、乱数による性能のぶれを小さくすることができ、より安定したアルゴリズムになると考えています。
