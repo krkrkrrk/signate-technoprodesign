@@ -7,8 +7,11 @@
 ・審査発表会を含めた総合ランキングで学生部門4位（97人中）  
   
 ## コンペ概要
-本コンペは画像に写る商品が「飲料」か「食料」かを分類するコンペです。  
-![画像1](https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/2890a0eb-f9bc-4b28-9e6b-5675645b0e27)
+本コンペは画像に写る商品が「飲料」か「食料」かを分類するコンペです。
+
+<p align="center">
+ <img src="https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/2890a0eb-f9bc-4b28-9e6b-5675645b0e27" width="800">
+</p>
 
 ## データセット
 訓練用データセット：2175枚  
@@ -49,23 +52,29 @@ AUC (Area Under the Curve)
 　左右反転、上下反転、回転といったシンプルなデータ拡張のみ追加
 
 ### ベースライン
-様々なモデルを調査した結果、eva02が最も精度が良く、eva02_base_patch14_224をベースラインとしました。  
-![image](https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/adc2bab1-e1c4-48b6-9b22-cd2bd3eaa902)
+様々なモデルを調査した結果、eva02が最も精度が良く、eva02_base_patch14_224をベースラインとしました。
+
+<p align="center">
+ <img src="https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/adc2bab1-e1c4-48b6-9b22-cd2bd3eaa902" width="800">
+</p>
 
 ### ベースライン改善
 ・eva02_large_patch14_448に変更  
 　コンペ初期に実験したときはパラメーターの設定ミスでbaseよりも精度が低くなったため、不採用にしていました。しかし、再度baseと全く同じ設定で実験を行ったところ、CVが約3.5%、Public LBが約1%向上しました。
 
 ・モデルのバージョン変更  
-　timmモデルのimagenetでのスコアをまとめた表を発見しました。eva02_large_patch14_448のデフォルトバージョンが以下の表における2番目のものであることに気づき、1番上のものに変更したところ、CVが約2.1%、Public LBが約1%向上しました。  
- <p align="center">
-  <img src="https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/2df2ca1a-d96a-4e60-b575-0f5a4dc94626" />
+　timmモデルのimagenetでのスコアをまとめた表を発見しました。eva02_large_patch14_448のデフォルトバージョンが以下の表における2番目のものであることに気づき、1番上のものに変更したところ、CVが約2.1%、Public LBが約1%向上しました。
+
+<p align="center">
+  <img src="https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/2df2ca1a-d96a-4e60-b575-0f5a4dc94626" width="700">
 </p>
 
 ・交差検証とアンサンブルの組み合わせ  
 　乱数シードのみを変えたモデルを５つ用意して、それぞれにおいて交差検証を行い、その結果を平均しました。これにより、乱数による性能のぶれを小さくすることができ、より安定したアルゴリズムになると考えています。
-![image](https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/76c0322c-4aa4-4371-90eb-7cb29076659e)
 
+ <p align="center">
+  <img src="https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/76c0322c-4aa4-4371-90eb-7cb29076659e" width="800">
+ </p>
 
 ### 精度向上に寄与しなかったアプローチ
 基本戦略で述べた「手法を変えるだけで精度が大幅に向上する」という気づきから、Adadelta、dagrad、Adam、Lion、momentum_SGD、Radam、Ranger21、RMSprop、SAM、SGDといったオプティマイザーを試しましたが、結局デフォルトのAdamWが最も安定しており精度が高かったです。
