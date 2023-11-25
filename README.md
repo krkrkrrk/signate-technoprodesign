@@ -69,6 +69,9 @@ AUC (Area Under the Curve)
   <img src="https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/2df2ca1a-d96a-4e60-b575-0f5a4dc94626" width="700">
 </p>
 
+・Warmupの導入
+　CV、Public LBが向上したのですが、実際にはPrivate LBが少し低下しており、精度向上には繋がっていないことが分かりました。しかし、epochとWarmupのステップ数を調整すると、CVが0.980から0.988まで向上することが分かりました。Private LBの値を見ないと確実なことは言えませんが、Warmupは精度向上に繋がるアプローチであった可能性が高いと考えています。
+
 ・交差検証とアンサンブルの組み合わせ  
 　乱数シードのみを変えたモデルを５つ用意して、それぞれにおいて交差検証を行い、その結果を平均しました。これにより、乱数による性能のぶれを小さくすることができ、より安定したアルゴリズムになると考えています。
 
