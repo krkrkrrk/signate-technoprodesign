@@ -74,10 +74,10 @@ AUC (Area Under the Curve)
 </p>
 
 #### ・Warmupの導入
-　Warmupの導入により、CV、Public LBが向上したのですが、実際にはPrivate LBが少し低下しており、精度向上には繋がっていないことが分かりました。しかし、コンペ後の調査でepochとWarmupのステップ数を調整すると、CVが0.980から0.988まで向上することが分かりました。Private LBの値を見ないと確実なことは言えませんが、Warmupは精度向上に繋がるアプローチであった可能性が高いと考えています。
+　Warmupの導入により、CV、Public LBが向上したのですが、実際にはPrivate LBが少し低下しており、精度向上には繋がっていないことが分かりました。しかし、コンペ後の調査でepochとWarmupのステップ数を調整すると、CVが0.977から0.988まで向上することが分かりました。Private LBの値を見ないと確実なことは言えませんが、Warmupは精度向上に繋がるアプローチであった可能性が高いと考えています。
 
 <p align="center">
-  <img src="https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/2918e225-7d7a-4ed0-a192-56db21e2203b" width="800">
+  <img src="https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/223fd91a-32d8-45bc-ab05-90f467ec5a3e" width="800">
 </p>
 
 #### ・交差検証とアンサンブルの組み合わせ  
