@@ -95,20 +95,20 @@ AUC (Area Under the Curve)
 Optunaを用いてハイパーパラメーターチューニングを行いました。CV、Public LBは上がりましたが、Private LBを見るとあまり効果はありませんでした。また、手法を変えると再度チューニングする必要があり、コストパフォーマンスが良くありません。これらのことから、最終的にはチューニングは行いませんでした。
 
 ### 最終的なパラメーター・手法
-'model_name': 'eva02_large_patch14_448.mim_m38m_ft_in22k_in1k',
-'n_fold': 5  
-'epochs': 4  
-'criterion': 'CrossEntropy'  
-'image_size': (448, 448)  
-'train_batch_size': 16  
-'test_batch_size': 32  
-'seed': 777  
-'optimizer': 'AdamW'  
-'learning_rate': 1.5e-05  
-'scheduler': 'warmup'  
-'warmup_step': '108'  
-'min_lr': 1e-06  
-'betas': (0.9, 0.999)  
+model_name : eva02_large_patch14_448.mim_m38m_ft_in22k_in1k  
+n_fold : 5  
+epochs : 4  
+criterion : CrossEntropy  
+image_size : (448, 448)  
+train_batch_size : 16  
+test_batch_size : 32  
+seed : 777  
+optimizer : AdamW  
+learning_rate : 1.5e-05  
+scheduler : warmup  
+warmup_step : 108  
+min_lr : 1e-06  
+betas : (0.9, 0.999)  
 
 ## まとめ
 今回が初コンペ&授業以外で機械学習を扱うのも初だったので、分からないことだらけで大変でした。
