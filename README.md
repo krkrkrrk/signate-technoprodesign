@@ -52,7 +52,7 @@ AUC (Area Under the Curve)
 　左右反転、上下反転、回転といったシンプルなデータ拡張のみ追加
 
 ### ベースライン
-様々なモデルを調査した結果、eva02が最も精度が良く、eva02_base_patch14_224をベースラインとしました。
+様々なモデルを調査した結果、eva02が最も精度が良く、eva02_base_patch14_224をベースラインとしました。(CV = 交差検証)
 
 <p align="center">
  <img src="https://github.com/krkrkrrk/signate-technoprodesign/assets/93073869/adc2bab1-e1c4-48b6-9b22-cd2bd3eaa902" width="800">
