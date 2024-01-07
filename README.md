@@ -25,7 +25,7 @@ AUC (Area Under the Curve)
 
 ## 審査発表会
 学生部門においては、AUCランキング上位10名が審査発表会に進むことができます。最終的なランキングは審査発表会の内容を踏まえて決定されます。  
-審査発表会で用いたスライドはこちら：https://drive.google.com/file/d/1DX5BDk5TKewiHqKUhjiqWy6Lt71cNQx2/view?usp=sharing
+審査発表会で用いたスライドはこちら：https://drive.google.com/file/d/1uuZLj9TU5KBnNpvajy-jn0Ivb-rX9gfW/view?usp=drive_link
 
 ### 審査項目
 ・スコアの結果  
